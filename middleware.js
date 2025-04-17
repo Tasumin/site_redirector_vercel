@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
 
-const redirects = JSON.parse(
-  readFileSync(resolve(process.cwd(), 'redirects.json'), 'utf-8')
-);
+const redirects = {
+  '/servicedesk': 'http://subdomain.domain.com/servicedesk/portal',
+  '/help': 'http://support.domain.com/help-center',
+  '/login': 'http://auth.domain.com/signin'
+};
 
 export function middleware(request) {
   const path = request.nextUrl.pathname.toLowerCase();
