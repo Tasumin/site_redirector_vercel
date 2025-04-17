@@ -1,36 +1,25 @@
-# Vercel Redirector using Middleware and JSON Mapping
+# Vercel Redirector using Edge Middleware
 
-This project is designed to perform path-based redirects using Vercel Edge Middleware and a separate `redirects.json` configuration file. It supports deployment under a custom domain such as `go.example.com`.
+This project uses Vercel Edge Middleware to perform redirects from specific paths to custom URLs.
 
 ## Features
 
-- Redirect any path (e.g., `/servicedesk`) to any URL
-- Centralized JSON configuration for all redirects
-- Case-insensitive matching of paths
-- HTTP 308 Permanent Redirect
+- Redirects `/servicedesk`, `/help`, etc. to external URLs
+- Uses Vercel Edge Middleware (zero latency, globally deployed)
+- Fully compatible with custom domains like `go.example.com`
 
 ## How to Use
 
-1. **Edit `redirects.json`**  
-   Update this file to include your redirect rules in the format:
-
-   ```json
-   {
-     "/servicedesk": "http://subdomain.domain.com/servicedesk/portal",
-     "/help": "http://support.domain.com/help-center"
-   }
-   ```
+1. **Edit `middleware.js`**  
+   Modify the `redirects` object to define your path-based redirect rules.
 
 2. **Deploy to Vercel**  
-   Push the project to GitHub and connect it with Vercel. Vercel will handle deployment.
+   Push this project to GitHub and import it into Vercel. Middleware is automatically detected.
 
-3. **Set Up a Custom Domain**  
-   Go to your project on Vercel:
-   - Navigate to **Settings > Domains**
-   - Add your domain (e.g., `go.example.com`)
-   - Update your DNS to point to Vercel's provided CNAME or A record
+3. **Configure Custom Domain**  
+   Add your custom domain to the project in the Vercel dashboard and update your DNS (e.g., CNAME to `cname.vercel-dns.com`).
 
-## Notes
+## Example
 
-- Paths are matched case-insensitively.
-- All redirect targets can be HTTP or HTTPS.
+Visiting `http://go.example.com/servicedesk` will redirect the user to:
+`http://subdomain.domain.com/servicedesk/portal`
