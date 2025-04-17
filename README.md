@@ -1,6 +1,6 @@
 # Root-Level Node.js Redirector for Vercel
 
-This version uses a single `index.js` file at the root, powered by `@vercel/node` runtime.
+This version uses a single `index.js` file at the root, powered by the `nodejs18.x` runtime.
 
 ## Features
 
@@ -11,7 +11,7 @@ This version uses a single `index.js` file at the root, powered by `@vercel/node
 ## Setup
 
 1. Deploy to Vercel
-2. Ensure your project uses the `@vercel/node` runtime via `vercel.json`
+2. Vercel detects the `nodejs18.x` runtime from `vercel.json`
 3. Add custom domain if needed
 
 ## Example
