@@ -1,8 +1,8 @@
 export default function handler(req, res) {
   const redirects = {
     '/servicedesk': 'http://subdomain.domain.com/servicedesk/portal',
-    '/help': 'http://support.domain.com/help-center',
-    '/login': 'http://auth.domain.com/signin'
+    '/datadog': 'https://datadog.com',
+    '/google': 'https://google.com'
   };
 
   const path = req.url.toLowerCase().replace('/api/redirect', '') || '/';
