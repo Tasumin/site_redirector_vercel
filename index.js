@@ -6,7 +6,7 @@ module.exports = (req, res) => {
     '/servicedesk': 'http://subdomain.domain.com/servicedesk/portal',
     '/help': 'http://support.domain.com/help-center',
     '/google': 'https://google.com',
-    'myapps': 'https://myapps.office.com'
+    '/myapps': 'https://myapps.office.com'
   };
 
   if (redirects[path]) {
