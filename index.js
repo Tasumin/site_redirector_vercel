@@ -5,7 +5,8 @@ module.exports = (req, res) => {
   const redirects = {
     '/servicedesk': 'http://subdomain.domain.com/servicedesk/portal',
     '/help': 'http://support.domain.com/help-center',
-    '/login': 'http://auth.domain.com/signin'
+    '/google': 'https://google.com',
+    'myapps': 'https://myapps.office.com'
   };
 
   if (redirects[path]) {
