@@ -1,25 +1,25 @@
-# Vercel Redirector using Edge Middleware
+# Node.js Redirector
 
-This project uses Vercel Edge Middleware to perform redirects from specific paths to custom URLs.
+A lightweight Node.js server that redirects specific paths to full URLs.
 
 ## Features
 
-- Redirects `/servicedesk`, `/help`, etc. to external URLs
-- Uses Vercel Edge Middleware (zero latency, globally deployed)
-- Fully compatible with custom domains like `go.example.com`
+- Uses the built-in `http` module
+- HTTP 308 Permanent Redirects
+- Runs on a custom port (defaults to 3000)
 
-## How to Use
+## How to Run
 
-1. **Edit `middleware.js`**  
-   Modify the `redirects` object to define your path-based redirect rules.
+```bash
+npm install
+npm start
+```
 
-2. **Deploy to Vercel**  
-   Push this project to GitHub and import it into Vercel. Middleware is automatically detected.
+## Configuration
 
-3. **Configure Custom Domain**  
-   Add your custom domain to the project in the Vercel dashboard and update your DNS (e.g., CNAME to `cname.vercel-dns.com`).
+Update `index.js` and modify the `redirects` object to add more path mappings.
 
 ## Example
 
-Visiting `http://go.example.com/servicedesk` will redirect the user to:
+Visiting `http://localhost:3000/servicedesk` will redirect you to:
 `http://subdomain.domain.com/servicedesk/portal`
