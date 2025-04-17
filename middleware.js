@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
-import redirects from './redirects.json' assert { type: 'json' };
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
+
+const redirects = JSON.parse(
+  readFileSync(resolve(process.cwd(), 'redirects.json'), 'utf-8')
+);
 
 export function middleware(request) {
   const path = request.nextUrl.pathname.toLowerCase();
