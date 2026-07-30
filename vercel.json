@@ -6,7 +6,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/api/app.js"
+      "dest": "/api/site-wrapper.js"
     }
   ]
 }
