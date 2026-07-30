@@ -164,11 +164,11 @@ function renderPage(contactEmail) {
           <div class="options">
             <div class="option">
               <strong>TalonDNS Redirect</strong>
-              <span>Get a simple link such as <code>talondns.com/lsps</code> that redirects visitors to your existing FiveM business website.</span>
+              <span>Get a simple link such as <code>talondns.com/yourbusiness</code> that redirects visitors to your existing FiveM business website.</span>
             </div>
             <div class="option">
               <strong>Custom Domain Name</strong>
-              <span>Use a domain such as <code>yourbusiness.com</code>. We can help connect its DNS records to your existing Vercel, GitHub Pages, or other hosted website.</span>
+              <span>Use a domain such as <code>examplebusiness.com</code>. We can help connect its DNS records to your existing hosted website.</span>
             </div>
           </div>
         </div>
@@ -181,18 +181,18 @@ function renderPage(contactEmail) {
             <div class="row">
               <label>
                 Character name
-                <input name="character" required placeholder="Bert Johnson" />
+                <input name="character" required placeholder="Character name" />
               </label>
               <label>
                 State ID
-                <input name="stateId" required inputmode="numeric" placeholder="33760" />
+                <input name="stateId" required inputmode="numeric" placeholder="State ID" />
               </label>
             </div>
 
             <div class="row">
               <label>
                 Discord username
-                <input name="discord" required placeholder="Tasumin" />
+                <input name="discord" required placeholder="Discord username" />
               </label>
               <label>
                 FiveM server
@@ -202,7 +202,7 @@ function renderPage(contactEmail) {
 
             <label>
               Business name
-              <input name="business" required placeholder="Los Santos Property Services" />
+              <input name="business" required placeholder="Business name" />
             </label>
 
             <div class="row">
@@ -217,23 +217,23 @@ function renderPage(contactEmail) {
               </label>
               <label>
                 Requested short link
-                <input name="slug" placeholder="lsps" />
+                <input name="slug" placeholder="yourbusiness" />
               </label>
             </div>
 
             <label>
               Existing website URL
-              <input type="url" name="website" required placeholder="https://your-business-site.vercel.app" />
+              <input type="url" name="website" required placeholder="https://example.com" />
             </label>
 
             <label>
               Custom domain name, if applicable
-              <input name="domain" placeholder="yourbusiness.com" />
+              <input name="domain" placeholder="examplebusiness.com" />
             </label>
 
             <label>
               Additional details
-              <textarea name="details" placeholder="Tell us what link you want, whether you already own the domain, and where your website is hosted."></textarea>
+              <textarea name="details" placeholder="Describe the requested link, domain ownership, and current website host."></textarea>
             </label>
 
             <div class="status" id="form-status" role="status">Your email application should open now. Review it and press Send to complete the request.</div>
