@@ -6,7 +6,8 @@ export default function handler(req, res) {
     '/servicedesk': 'http://renpsg.atlassian.net/servicedesk/customer/portal/2',
     '/changerequest': 'http://renpsg.atlassian.net/servicedesk/customer/portal/5',
     '/google': 'https://google.com',
-    '/myapps': 'https://myapplications.office.com'
+    '/myapps': 'https://myapplications.office.com',
+    '/lsps' : 'https://fivem-lsps-portal.vercel.app/'
   };
   if (redirects[path]) {
     res.writeHead(308, { Location: redirects[path] });
